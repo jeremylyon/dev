@@ -2,26 +2,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet"
-	href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script
-	src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script	src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+<script type="text/javascript" src="js/rm_utility.js"></script>
+<script type="text/javascript" src="js/rm.js"></script>
+
+
+	
 
 <body>
-	<div data-role="page" id="wmrInstructions"  data-theme="c">
+	<div data-role="page" id="wmrInstructions"  data-theme="d">
 		<header data-role="header">
-			<h2>Where's My Refund?</h2>
+			<h1>My Refund</h1>
 			<!-- 		<a href="">DOR</a> <a href="">TPSS</a> -->
 		</header>
 
 
 		<article data-role="content">
-			
+			<img src="images/DOR.jpg" alt="DOR Logo" />
 				<a href="#bob"></a>
-					<h1>Instructions:</h1>
+					<h1>Information:</h1>
 					<p>You filed your return, and you've waited the recommended time before checking on your refund status.
 
 Now you want to know when you will receive your refund.
@@ -51,21 +55,22 @@ You will need to provide the following information from your 2012 Oregon return:
 	</div>
 
 
-	<div data-role="page" id="wmrForm" data-theme="b">
+	<div data-role="page" id="wmrForm" data-theme="d">
 		<header data-role="header">
-			<h2>Enter Info</h2>
+			<h1>My Refund</h1>
 			
 		</header>
-		<form>
+		<form data-role = "content">
+		<img src="images/DOR.jpg" alt="DOR Logo" />
 
 			<label for="ssn">SSN or ITIN:</label>
 			
 			 <input type="password" name="ssn" id="ssn" value="" >
 				
-				<label for="select-choice-0" class="select">Filing Status:</label> 
+				<label for="select_filing_status" class="select">Filing Status:</label> 
 				
-			<select name="select-choice-0" id="select-choice-0">
-				<option value="">Select</option>
+			<select name="select_filing_status" id="select_filing_status" >
+				
 				<option value="1">Single</option>
 				<option value="3">Married Filing Jointly</option>
 				<option value="3">Registered Domestic Partners Filing Jointly</option>
@@ -77,19 +82,20 @@ You will need to provide the following information from your 2012 Oregon return:
 
 		</form>
 		
-		<div id=results><p>
-We have not processed your return at this time. If you filed electronically, your Oregon acknowledgement, received in addition to your federal acknowledgement, confirms we have received your return and will process it. If you have waited eight weeks since you mailed your return or you have other questions, please call the Tax Services Unit during our business hours.
+		<div id=results data-role="content"><p>
+We have not processed your return at this time. If you filed electronically, your Oregon acknowledgement, received in addition to your federal acknowledgement, confirms we have received your return and will process it. 
 .</p></div>
 				
 		<footer data-role="footer" data-position="fixed">
 			<nav data-role="navbar">
 				<ul>
-					<li><a href=#wmrInstructions data-icon="info">Info</a></li>					
+					<li><a href=#wmrInstructions data-icon="info">Information</a></li>					
 				</ul>
 			</nav>
 		</footer>
 	</div>
 
-	
+
+
 </body>
 </html>

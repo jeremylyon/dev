@@ -1,0 +1,141 @@
+@CHARSET "ISO-8859-1";
+
+/* Where's My Refund mobile 
+ * 
+ * rm.css
+ * 
+ * By: Jeremy Lyon
+ * Version 1.0 
+ * September 20th, 2013
+ * 
+ *  
+ * */
+
+.dorLogo {
+	
+	 padding:5px 5px;
+	 width:100px;
+	 align:left;
+	 
+}
+
+.imageResize20{
+    width:20px; 
+    height: auto;
+    vertical-align:middle;
+    padding:1px 5px;
+    
+}
+
+.imageResize40{
+    width:40px; 
+    height: auto;
+    vertical-align:middle;
+    padding:1px 5px;
+    
+}
+
+.cityBanner {
+	
+	background-color:#ddd;		
+}
+
+.labelText {	
+	
+    color: #005499;
+	font-weight:bold;
+	
+}
+
+.passwordText {	
+	
+     font: bold 100% "Lucida Sans Unicode",sans-serif;
+	
+}
+
+.wmrSplash {
+	
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle; 
+   
+}
+
+.OregonStateSeal {
+	
+	 padding:5px 5px;
+	 width:40px;
+	 position:absolute;
+     right:5px;
+	
+}
+
+.resultsBasePanel {
+	
+    background-color: #ffffff;   
+    margin: 0;
+    padding: 0px;   
+	
+}
+
+.resultsOuterPanel {
+	
+background-color: #E5EECC;
+
+    background-image: linear-gradient(#005499,#5489b8  500px);   
+     background-image: /bob.jpg;   
+    color: #000000;
+    margin: 0;
+    padding-top:40px;
+    padding-right:10px;
+    padding-left:10px;
+    padding-bottom:1260px;
+    
+    height: 100%;
+    width: auto%;
+    
+	
+}
+
+.resultsInnerPanel {
+	
+background-color: #ffffff;   
+   border-radius: 15px;
+-moz-border-radius: 15px;
+    
+    padding: 5px;
+    width: auto;
+    
+	
+}
+
+p.statusBannerText {
+	position:absolute;
+    right:30px;
+    color: #005499;
+	font-weight:bold;
+	
+}
+
+p.address{	
+    color: #005499;
+	font-weight:bold;
+}
+
+.statusImage {	
+	
+	 position:absolute;
+     left:20px;
+	
+}
+
+
+.address img { 
+	float: right; 
+     width:50px; 
+    height: auto;
+    vertical-align:middle;
+    padding:1px 5px;
+  }
+

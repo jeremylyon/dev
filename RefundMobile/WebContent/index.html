@@ -3,99 +3,274 @@
 <html lang="en">
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>Oregon Department of Revenue - Where's My Refund?</title>
+
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script	src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<link rel="stylesheet" href="css/rm.css" />
+	<script type="text/javascript" src="js/rm.js" ></script>
 
-<script type="text/javascript" src="js/rm_utility.js"></script>
-<script type="text/javascript" src="js/rm.js"></script>
-
-
-	
+</head>
 
 <body>
-	<div data-role="page" id="wmrInstructions"  data-theme="d">
+
+
+	<div data-role="page" id="splash" data-theme="d">
+
 		<header data-role="header">
 			<h1>My Refund</h1>
-			<!-- 		<a href="">DOR</a> <a href="">TPSS</a> -->
 		</header>
 
+		<img src="images/dl.jpg" alt="DOR Logo" class="dorLogo" />
+		<img src="images/oss.jpg" alt="OregonStateSeal" class="OregonStateSeal" /><br /><br />
+		<img src="images/sp.png" alt="WMR Logo" class="wmrSplash" />
 
-		<article data-role="content">
-			<img src="images/DOR.jpg" alt="DOR Logo" />
-				<a href="#bob"></a>
-					<h1>Information:</h1>
-					<p>You filed your return, and you've waited the recommended time before checking on your refund status.
 
-Now you want to know when you will receive your refund.
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href=#wmrForm data-icon="check" class="checkNow" data-transition="slide">Check Now!</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
 
-You will need to provide the following information from your 2012 Oregon return:
-<ul>
-<li>Your Social Security number (SSN) or IRS Individual Taxpayer Identification Number (ITIN). For a joint return, you can use either filer's SSN or ITIN, and</li>
-<li>Filing status (single, married filing jointly, registered domestic partners filing jointly (RDP), married filing separately, RDP filing separately, head of household, or qualifying widow(er), and</li>
+	<div data-role="page" id="wmrForm" data-theme="d">
+		
+		<header data-role="header">
+			<h1>My Refund</h1>
+		</header>
+		
+		<img src="images/dl.jpg" alt="DOR Logo" class="dorLogo" />
+		<img src="images/oss.jpg" alt="OregonStateSeal" class="OregonStateSeal" />
 
-</ul>
-</p>
+		<form data-role="content" id="wmrFormElement">
+			<div id=formElements>
+				<label for="ssn" class="labelText">SSN or ITIN:</label>
+				<input type="password" name="ssn" id="ssn" value="" class="formSSN formNumber" maxlength="9" pattern="[0-9*]">
+				<label for="fs" class="select labelText">Filing Status:</label>
+				<select name="fs" id="fs" data-theme="b">
+					<option value="1">Single</option>
+					<option value="2">Married Filing Jointly</option>
+					<option value="2">Registered Domestic Partners Filing Jointly</option>
+					<option value="3">Married Filing Separately</option>
+					<option value="3">Registered Domestic Partner Filing Separately</option>
+					<option value="4">Head of Household</option>
+					<option value="5">Qualifying Widow(er)</option>
+				</select>
+				<label for="er" class="labelText">Expected Refund:</label>
+				<input name="er" id="er" value="$" class="formER formNumber" maxlength="9" pattern="[0-9*]" type="number"><br />
+
+				<button id="submit" value="submit-value" name="submit" data-theme="b" type="button" class="ui-btn-hidden getStatusButton">Check Refund Status</button>
+			</div>
+		</form>
+
+		<div id="results" data-role="content" class="resultsBasePanel"></div>
+
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href=#info data-icon="info" data-transition="slide">Info</a></li>
+					<li><a href=#contact data-icon="star" data-transition="slide">Contact Us</a></li>
+					<li><a href=#wmrForm data-icon="delete" class="clearFormContents" data-transition="slide">Clear</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<div data-role="page" id="contact" data-theme="d">
+
+		<header data-role="header">
+			<h1>Contact DOR</h1>
+		</header>
+		
+		<img src="images/dl.jpg" alt="DOR Logo" class="dorLogo" />
+		<img src="images/oss.jpg" alt="OregonStateSeal" class="OregonStateSeal" />
+		<div data-role="content">
+		
+		<h3 class="cityBanner">Salem Main</h3>
+			
+			<p class="address">
+				<a href="http://goo.gl/maps/fVmCg"><img src='images/mp.png'></a>
+				Oregon Department of Revenue<br />
+				955 Center Street NE<br />
+				Salem, OR 97301-2555
+			</p>
+			
+			<p>				
+				<a href='tel:5033784988'><img src='images/pi.jpg' class='imageResize20'>(503) 378-4988</a>				
+			</p>
+			
+			<p>
+				<a href='tel:8003564222'><img src='images/pi.jpg' class='imageResize20'>(800) 356-4222 From inside Oregon</a>				
+			</p>
+			
+			Fax: 503-945-8738<br />
+			TTY: 800-886-7204<br />
+			Office Hours:<br />
+			Monday - Friday 8:00 - 5:00
+		
+					<h3 class="cityBanner">Portland</h3>
+					
+					<p class="address">
+					<a href="http://goo.gl/maps/fqtlm"><img src='images/mp.png'></a>
+						800 NE Oregon Street, 5th floor<br />
+						Portland, OR 97232
+					</p>
+					<p>
+						<a href='tel:9716730700'><img src='images/pi.jpg' class='imageResize20'>(971) 673-0700</a>
+					</p>
+					Fax: (971) 673-0739<br />
+					Office Hours:<br />
+					Monday - Friday 8:00 - 5:00
+			
+
+		
+					<h3 class="cityBanner">Eugene</h3>
+					<p class="address">
+						<a href="http://goo.gl/maps/j5skA"><img src='images/mp.png'></a>
+						1600 Valley River Drive, Suite 310<br />
+						Eugene OR 97401-2129
+					</p>
+					<p>
+						<a href='tel:5416867935'><img src='images/pi.jpg' class='imageResize20'>(541) 686-7935</a>
+					</p>
+					Fax: (541) 686-7874<br />
+					Office Hours:<br />
+					Monday - Friday 8:00 - 5:00
+		
+					<h3 class="cityBanner">Bend</h3>
+					<p class="address">
+						<a href="http://goo.gl/maps/wbE5V"><img src='images/mp.png'></a>
+						951 SW Simpson Ave, Suite 100<br />
+						Bend OR 97702-3118
+					</p>
+					<p>
+						<a href='tel:5413886139'><img src='images/pi.jpg'
+							class='imageResize20'>(541) 388-6139</a>
+					</p>
+					Fax: (541) 389-7563<br /> Office Hours:<br /> Monday - Friday
+					8:00 - 5:00
+		
+					<h3 class="cityBanner">Medford</h3>
+					<p class="address">
+					<a href="http://goo.gl/maps/LsHB8"><img src='images/mp.png'></a>
+						3613 Aviation Way, Suite 102<br />
+						Medford OR 97504
+					</p>
+					<p>
+						<a href='tel:5418586500'><img src='images/pi.jpg'
+							class='imageResize20'>(541) 858-6500</a>
+					</p>
+					Fax: (541) 776-6051<br /> Office Hours:<br /> Monday - Friday
+					8:00 - 5:00
+	
+					<h3 class="cityBanner">Pendleton</h3>
+					<p class="address">
+					<a href="http://goo.gl/maps/1v5dA"><img src='images/mp.png'></a>
+						700 SE Emigrant, Suite 310<br />
+						Pendleton OR 97801
+					</p>
+					<p>
+						Personal Income Tax: <br /><a href='tel:5412786851'><img src='images/pi.jpg' class='imageResize20'>(541) 278-6851</a>
+					</p>
+					<p>
+						Property Tax: <br /><a href='tel:5412767811'><img src='images/pi.jpg' class='imageResize20'>(541) 276-7811</a>
+					</p>
+					Fax: (541) 966-4471<br /><br />
+					<img src="images/ai.png" class='imageResize20'>The Pendleton office does NOT accept cash payments.<br />
 
 			
+			
+
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href=#splash data-icon="home" data-transition="slide">Home</a></li>
+						<li><a href=#info data-icon="info" data-transition="slide">Info</a></li>
+					</ul>
+				</nav>
+			</footer>
+
+		</div>
+	</div>
+
+	<div data-role="page" id="info" data-theme="d">
+		<header data-role="header">
+			<h1>Refund Info</h1>
+		</header>
+		
+		<img src="images/dl.jpg" alt="DOR Logo" class="dorLogo" />
+		<img src="images/oss.jpg" alt="OregonStateSeal" class="OregonStateSeal" />
+
+		<article data-role="content">
+		<h3 class="cityBanner">Safe and Secure</h3>
+			<p class="address">
+			<img src='images/pl.jpg'>
+			Your mobile connection to the Oregon Department of Revenue is encrypted with 256-bit encryption. The identity of this service has been verified by Entrust Certification Authority - L1C</p>
+		<h3 class="cityBanner">What you will need.</h3>
+			<p>You filed your return, and you've waited the recommended time
+				before checking on your refund status. Now you want to know when you
+				will receive your refund. You will need to provide the following
+				information from your 2013 Oregon return:</p>
+		<h3 class="cityBanner">SSN or ITIN</h3>
+			<p>Your Social Security number (SSN) or IRS Individual Taxpayer
+				Identification Number (ITIN). For a joint return, you can use either
+				filer's SSN or ITIN, and</p>
+		<h3 class="cityBanner">Filing Status</h3>				
+			<p>Filing status (single, married filing jointly, registered
+				domestic partners filing jointly (RDP), married filing separately,
+				RDP filing separately, head of household, or qualifying widow(er),
+				and
+		<h3 class="cityBanner">Refund Amount</h3>				
+			<p>The exact amount in whole dollars of the refund you requested
+				on your return.</p>
+			<ul>
+				<li>If you filed <span class="labelText">Form 40</span>, enter the amount from line <span class="labelText">48</span>
+					(Overpayment line)</li>
+				<li>If you filed <span class="labelText">Form 40N</span>, enter the amount from line <span class="labelText">66</span>
+					(Overpayment line)</li>
+				<li>If you filed <span class="labelText">Form 40P</span>, enter the amount from line <span class="labelText">66</span>
+					(Overpayment line)</li>
+			</ul>			
 
 		</article>
 
 		<footer data-role="footer" data-position="fixed">
-
 			<nav data-role="navbar">
 				<ul>
-					
-					<li><a href=#wmrForm data-icon="grid">Go!</a></li>
+					<li><a href=#contact data-icon="star" data-transition="slide">Contact Us</a></li>
+					<li><a href=#splash data-icon="home" data-transition="slide">Home</a></li>
 				</ul>
 			</nav>
 		</footer>
-
 	</div>
-
-
-	<div data-role="page" id="wmrForm" data-theme="d">
+	
+	<div data-role="page" id="error" data-theme="d">
 		<header data-role="header">
-			<h1>My Refund</h1>
-			
+			<h1>Service Alert</h1>
 		</header>
-		<form data-role = "content">
-		<img src="images/DOR.jpg" alt="DOR Logo" />
-
-			<label for="ssn">SSN or ITIN:</label>
-			
-			 <input type="password" name="ssn" id="ssn" value="" >
-				
-				<label for="select_filing_status" class="select">Filing Status:</label> 
-				
-			<select name="select_filing_status" id="select_filing_status" >
-				
-				<option value="1">Single</option>
-				<option value="3">Married Filing Jointly</option>
-				<option value="3">Registered Domestic Partners Filing Jointly</option>
-				<option value="4">Married Filing Separately</option>				
-				<option value="5">Registered Domestic Partner Filing Separately</option>
-				<option value="6">Head of Household</option>
-				<option value="7">Qualifying Widow(er)</option>				
-			</select>
-
-		</form>
 		
-		<div id=results data-role="content"><p>
-We have not processed your return at this time. If you filed electronically, your Oregon acknowledgement, received in addition to your federal acknowledgement, confirms we have received your return and will process it. 
-.</p></div>
-				
+		<img src="images/dl.jpg" alt="DOR Logo" class="dorLogo" />
+		<img src="images/oss.jpg" alt="OregonStateSeal" class="OregonStateSeal" />
+
+		<article data-role="content">
+		<h3>Service Unavailable</h3>		
+		<p>Where's my Refund is currently unavailable, please check back later.</p>
+
+		</article>
+
 		<footer data-role="footer" data-position="fixed">
 			<nav data-role="navbar">
-				<ul>
-					<li><a href=#wmrInstructions data-icon="info">Information</a></li>					
+				<ul>					
+					<li><a href=#splash data-icon="home" data-transition="slide">Home</a></li>
 				</ul>
 			</nav>
 		</footer>
 	</div>
-
-
-
 </body>
 </html>

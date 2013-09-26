@@ -141,7 +141,7 @@ $(document).on("pageinit","#wmrForm" ,function(){
 				
 		// Set REST Service location
 		//var webServiceURL = 'http://d-36312.dor.local:9080/MobileRefund/rest/status';
-		var webServiceURL = 'http://revenue3.dor.local:10073/MobileRefund/rest/statuss';			
+		var webServiceURL = 'http://revenue3.dor.local:10073/MobileRefund/rest/status';			
 
 		// Set input parameter variables
 		var data = {ssn:ssn,fs:fs,er:er};	   
